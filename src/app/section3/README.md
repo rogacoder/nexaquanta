@@ -118,13 +118,12 @@ From initial look, the file is using a deprecated method for http testing and mi
 
 **Modernize...**
 
-Inside this folder I have provided an example of a design pattern for a component like this that;
-1. Keeps spec files to unit testing only
-2. Tests the DOM with a cypress component test
-3. Makes use of the 'dumb' component pattern to 
-	- simplify testing
-	- ease maintainance
-	-  ***ease the work like this in future upgrades***.
-	- ...
+The Modernisation of the spec file is, apart from new syntax and flow, not Angular version specific.
+
+To ease fucture upgrades, these practices are reccomended
+
+1. Keep http calls to services
+2. Employ a 'smart/dumb' (container/presentation) architecture - Separation of Concerns and ease of switching between SPA and SSR/SSG
+3. Use Cypress Component testing for e2e tests "in the box" and a separate e2e project for more 'integrated' E2E tests
 
 
